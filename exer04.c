@@ -7,16 +7,12 @@
 int main()
 {
 
-    char nome, endereco, telefone;
-
-    printf("Digite um nome: ");
-        scanf("%s", &nome);
-    printf("Digite um endereço: ");
-        scanf("%s", &endereco);
-    printf("Digite um telefone: ");
-        scanf("%s", &telefone);
-
-    printf("O nome digitado foi %s \nO endereço digitado foi: %s \nO telefone digitado foi: %s", nome, endereco, telefone);
+    char nome[100]; //char para receber strings, nome da variável e o limite de caracteres máximos
+        printf("Digite seu nome: ");
+            scanf("%s", nome); 
+            //para escanear string, não é necessário do & antes da variável por que a variável já é um ponteiro para a primeira 
+            //posição do array de caracteres, então não é necessário usar o operador & para obter o endereço de memória.
+        printf("Seu nome eh: %s", nome);
 
 
     return 0;
